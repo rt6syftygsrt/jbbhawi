@@ -1,10 +1,11 @@
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
 
 
 
-client.login('NTM5ODMxNTQwMzY5MzI2MTEw.DzIE2A.XX0qFh2_JFdzNKIVU5A2RAL0oGs'); 
+client.login('NTAzNTQzMTM1NjE2MzY4NjQw.DzIHtw.JzrIYm0ho19XQKEUfEtT64o_ZJg'); 
 
 
 
@@ -21,6 +22,4 @@ client.user.setStatus("dnd");
 // playing
 client.on('ready', () => {                           
 client.user.setGame(``,'https://www.twitch.tv/tarikrs');                                                                                                                                                                                                                                                                                                                                                                                                                             client.user.setGame(`-help | On 20 Servers`,'https://www.twitch.tv/v5bz');
-});          
-
-
+});
