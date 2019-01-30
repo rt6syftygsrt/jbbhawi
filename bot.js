@@ -1,12 +1,10 @@
-
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
 
 
 
-client.login('NTAzNTQzMTM1NjE2MzY4NjQw.DzIHtw.JzrIYm0ho19XQKEUfEtT64o_ZJg'); 
-
+client.login('NDM4MzcxMjQzODAxMDUxMTQx.DyuL0w.2YKPerRUndolKHXoa2O6NaBvNjY'); 
 
 
 client.on('ready',  () => {
@@ -22,24 +20,45 @@ client.user.setStatus("dnd");
 // playing
 client.on('ready', () => {                           
 client.user.setGame(``,'https://www.twitch.tv/tarikrs');                                                                                                                                                                                                                                                                                                                                                                                                                             client.user.setGame(`-help | On 20 Servers`,'https://www.twitch.tv/v5bz');
-});
+});          
 
 
 
          
-client.on('message', message => {
-     if (message.content === "help-") {
-message.author.send("**اوامر البوت**" + `  **
-لمسح شات اكتب  مسح
- 
-لو تبي تنشى شات كتابي اكتب --->ch
 
-لو تبي تنشى روم صوتي اكتب --->cv 
+client.on('تثبيت', () => {
+var x = client.channels.get("504807381373419541");
+if (x) x.join();
+});
 
-لوتبي تقفل شات اكتب ---> $mu
 
-لو تبي تفك شات اكتب $un
-**`);
-    }
-});     
-            
+
+
+
+const  adminprefix  =  " $ " ؛
+const  devs  = [ ' 496597218195800084 ' ، ' 438371243801051141 ' ]؛
+العميل . على ( ' message ' ، message  => {
+  var argresult =  message . محتوى . انقسام ( `  ` ). شريحة ( 1 ). انضمام ( '  ' )؛
+    اذا ( ! devs . تتضمن ( message . author . id )) return ؛
+    
+إذا كان ( message . content . يبدأ بـ (adminprefix +  ' بلاي ' )) {
+  العميل . المستخدم . setGame (argresult)؛
+    رسالة . قناة . sendMessage ( ` ** $ { argresult } تم تغيير بلاينق البوت إلى ** ` )
+} آخر 
+  إذا كان ( message . content . يبدأ بـ (adminprefix +  ' نيم ' )) {
+العميل . المستخدم . setUsername (argresult). ثم
+    رسالة . قناة . sendMessage ( ` ** $ { argresult } **: تم تغيير أسم البوت إلى ` )
+ رسالة العودة . الرد ( " ** لا يمكن تغيير الاسم يجب عليك الانتظآر لمدة ساعتين. ** " )؛
+} آخر
+  إذا كان ( message . content . تبدأ (adminprefix +  ' افتار ' )) {
+العميل . المستخدم . setAvatar (argresult)؛
+  رسالة . قناة . sendMessage ( ` ** $ { argresult } **: تم تغير صورة البوت ` )؛
+      } آخر     
+إذا كان ( message . content . يبدأ بـ (adminprefix +  ' ستريم ' )) {
+  العميل . المستخدم . setGame (argresult، " https://www.twitch.tv/idk " )؛ // wennnn
+    رسالة . قناة . sendMessage ( ` ** تم تغيير تويتش البوت إلى   $ { argresult } ** ` )
+}
+})؛
+
+
+
